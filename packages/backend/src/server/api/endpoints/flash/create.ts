@@ -30,7 +30,7 @@ export const meta = {
 
 	res: {
 		type: 'object',
-		optional: true, nullable: true,
+		optional: true, nullable: false,
 		ref: 'Flash',
 	},
 } as const;
