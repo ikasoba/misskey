@@ -10,6 +10,7 @@
 // きぇぇええええええ:resonyance:
 // ウォウォウォ:ablobcat_photo:イェイェイェ:alobcat_photobomb:
 // レインボー桃太郎　山根
+// 枝豆
 
 import ms from 'ms';
 import { Inject, Injectable } from '@nestjs/common';
