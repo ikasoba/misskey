@@ -11,6 +11,7 @@
 // ウォウォウォ:ablobcat_photo:イェイェイェ:alobcat_photobomb:
 // レインボー桃太郎　山根
 // 枝豆
+// あ
 
 import ms from 'ms';
 import { Inject, Injectable } from '@nestjs/common';
