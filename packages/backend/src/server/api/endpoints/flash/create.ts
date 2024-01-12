@@ -14,6 +14,7 @@
 // あ
 // しりとり
 // おあー
+// ななとだきなも！！！！
 
 import ms from 'ms';
 import { Inject, Injectable } from '@nestjs/common';
