@@ -7,6 +7,8 @@
 // ピギモンゴ
 // 人生のネタバレ、ひじきっぽいな
 // 歯磨き粉
+// きぇぇええええええ:resonyance:
+// ウォウォウォ:ablobcat_photo:イェイェイェ:alobcat_photobomb:
 
 import ms from 'ms';
 import { Inject, Injectable } from '@nestjs/common';
