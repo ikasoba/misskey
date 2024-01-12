@@ -12,6 +12,7 @@
 // レインボー桃太郎　山根
 // 枝豆
 // あ
+// しりとり
 
 import ms from 'ms';
 import { Inject, Injectable } from '@nestjs/common';
