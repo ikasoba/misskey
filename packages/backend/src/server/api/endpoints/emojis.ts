@@ -23,7 +23,7 @@ export const meta = {
 		properties: {
 			emojis: {
 				type: 'array',
-				optional: false, nullable: false,
+				optional: true, nullable: false,
 				items: {
 					type: 'object',
 					optional: false, nullable: false,
