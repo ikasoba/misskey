@@ -19,7 +19,7 @@ export const meta = {
 
 	res: {
 		type: 'object',
-		optional: true, nullable: false,
+		optional: true, nullable: true,
 		properties: {
 			emojis: {
 				type: 'array',
