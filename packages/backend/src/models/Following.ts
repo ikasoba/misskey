@@ -96,5 +96,19 @@ export class MiFollowing {
 		comment: '[Denormalized]',
 	})
 	public followeeSharedInbox: string | null;
+
+	@Index()
+	@Column('varchar', {
+		length: 512, nullable: true,
+		comment: 'id of remote follow object.',
+	})
+	public uri: string | null;
+
+	@Index()
+	@Column({
+		...id(),
+		comment: 'id of actvity pub follow object.',
+	})
+	public followRequestId: string | null;
 	//#endregion
 }

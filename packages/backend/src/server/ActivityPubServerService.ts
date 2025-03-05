@@ -747,7 +747,7 @@ export class ActivityPubServerService {
 
 			reply.header('Cache-Control', 'public, max-age=180');
 			this.setResponseType(request, reply);
-			return (this.apRendererService.addContext(this.apRendererService.renderFollow(follower, followee)));
+			return (this.apRendererService.addContext(this.apRendererService.renderFollow(follower, followee, { id: `${follower.id}/${followee.id}` })));
 		});
 
 		// follow
@@ -782,7 +782,7 @@ export class ActivityPubServerService {
 
 			reply.header('Cache-Control', 'public, max-age=180');
 			this.setResponseType(request, reply);
-			return (this.apRendererService.addContext(this.apRendererService.renderFollow(follower, followee)));
+			return (this.apRendererService.addContext(this.apRendererService.renderFollow(follower, followee, { id: followRequest.id })));
 		});
 
 		done();

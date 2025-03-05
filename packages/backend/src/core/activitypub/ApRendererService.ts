@@ -33,6 +33,8 @@ import { ApMfmService } from './ApMfmService.js';
 import { CONTEXT } from './misc/contexts.js';
 import type { IAccept, IActivity, IAdd, IAnnounce, IApDocument, IApEmoji, IApHashtag, IApImage, IApMention, IBlock, ICreate, IDelete, IFlag, IFollow, IKey, ILike, IMove, IObject, IPost, IQuestion, IReject, IRemove, ITombstone, IUndo, IUpdate } from './type.js';
 
+export type FollowRequestIdFormatOptions = { uri: string } | { id: string };
+
 @Injectable()
 export class ApRendererService {
 	constructor(
@@ -229,10 +231,10 @@ export class ApRendererService {
 	public renderFollow(
 		follower: MiPartialLocalUser | MiPartialRemoteUser,
 		followee: MiPartialLocalUser | MiPartialRemoteUser,
-		requestId?: string,
+		requestId: FollowRequestIdFormatOptions,
 	): IFollow {
 		return {
-			id: requestId ?? `${this.config.url}/follows/${follower.id}/${followee.id}`,
+			id: 'uri' in requestId ? requestId.uri : `${this.config.url}/follows/${requestId.id}`,
 			type: 'Follow',
 			actor: this.userEntityService.getUserUri(follower),
 			object: this.userEntityService.getUserUri(followee),

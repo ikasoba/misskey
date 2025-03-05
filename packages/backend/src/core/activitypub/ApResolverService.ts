@@ -169,7 +169,7 @@ export class Resolver {
 						if (follower == null || followee == null) {
 							throw new IdentifiableError('06ae3170-1796-4d93-a697-2611ea6d83b6', 'resolveLocal: follower or followee does not exist');
 						}
-						return this.apRendererService.addContext(this.apRendererService.renderFollow(follower as MiLocalUser | MiRemoteUser, followee as MiLocalUser | MiRemoteUser, url));
+						return this.apRendererService.addContext(this.apRendererService.renderFollow(follower as MiLocalUser | MiRemoteUser, followee as MiLocalUser | MiRemoteUser, { uri: url }));
 					});
 			default:
 				throw new IdentifiableError('7a5d2fc0-94bc-4db6-b8b8-1bf24a2e23d0', `resolveLocal: type ${parsed.type} unhandled`);
